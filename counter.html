@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How many Kisses</title>
+<link rel="icon" type="image" href="https://scontent.fcuu1-1.fna.fbcdn.net/v/t1.0-9/117414239_10158382906779070_630631629994864919_n.jpg?_nc_cat=104&ccb=2&_nc_sid=09cbfe&_nc_eui2=AeEemYxrol2BfCoDyURr0IGPyifP-HUNOLDKJ8_4dQ04sApwZILhYD7pKcdReAgNJ9xrI20lpO0A4ivKv-TByOuX&_nc_ohc=hhedTprRLJQAX_NcSz9&_nc_ht=scontent.fcuu1-1.fna&oh=0b3aee9d7cee1b9885301afb208db305&oe=5FC3DAA7">
+<style>
+p {
+  display: inline;
+  font-size: 40px;
+  margin-top: 0px;
+}
+.glass{
+    width: 2vw;
+    vertical-align: middle;
+}
+.kis-b{
+    width: 7vw;
+    vertical-align: bottom;
+}
+.container{
+    justify-content: center;
+    vertical-align: middle;
+    display: ;
+    border:10px inset #990033;
+    margin: 15vw;
+}
+@media screen and (max-width: 800px) {
+    .glass{
+    width: 7vw;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <h1>If I were with u right now, u receive:</h1>
+    <p id="kiss"></p>
+    <img class="kis-b" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e1026f06-17a3-41a3-8fc1-ba8263aa101a/dcsl190-1f6e8408-96af-43bc-90ed-274deb52ab99.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvZTEwMjZmMDYtMTdhMy00MWEzLThmYzEtYmE4MjYzYWExMDFhXC9kY3NsMTkwLTFmNmU4NDA4LTk2YWYtNDNiYy05MGVkLTI3NGRlYjUyYWI5OS5naWYifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ._NMV-5UJ5StGkGxj4eDKugzeTNzQBJ3HiO-azTgWsuc" alt="">
+     <br> <br> <br>
+    <h1>Solo faltan:</h1>
+    <p id="days"></p> <img class="glass" src="https://i.gifer.com/XVo6.gif" alt="">
+    <h3>para verte baby</h3>
+    
+</div>
+   
+    <script>
+    // The data/time we want to countdown to
+    var countDownDate = new Date("Dec 18, 2020 16:37:52").getTime();
+
+    // Run myfunc every second
+    var myfunc = setInterval(function() {
+
+    var now = new Date().getTime();
+    var timeleft = countDownDate - now;
+        
+    // Calculating the days, hours, minutes and seconds left
+    var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
+    var kiss = days + 123;
+        
+    // Result is output to the specific element
+    document.getElementById("kiss").innerHTML = kiss + " kisses";
+    document.getElementById("days").innerHTML = days + " días"
+
+        
+    // Display the message when countdown is over
+    if (timeleft < 0) {
+        clearInterval(myfunc);
+        document.getElementById("days").innerHTML = ""
+ 
+        document.getElementById("end").innerHTML = "TIME UP!!";
+    }
+    }, 1000);
+    </script>
+</body>
+</html>
