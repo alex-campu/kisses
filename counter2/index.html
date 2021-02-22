@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frida in Chiwas</title>
+    <link rel="icon" type="image/png" href="https://www.vhv.rs/dpng/d/3-39586_love-doges-hd-png-download.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="main">
+    <h1> <span id="number"></span> Days to Wake Up Together...</h1>
+
+    <img class="main-pic" src="./mainPic.jpg" alt="">
+
+    <div class="lirul-pics">
+<img  class="gif" src="https://64.media.tumblr.com/tumblr_lxghjwIufF1r2mwkp.gif" alt="">
+<img class="gif" id="secnd" src="https://64.media.tumblr.com/79da25ec86a0a2ebf2682d9293699589/tumblr_inline_mp96bkTV0w1qz4rgp.gif" alt="">
+    </div>
+</div>
+</main>
+</body>
+</html>
+<style>
+    body{
+        background-color:#350505 ;
+    }
+    h1{
+        text-align: center;
+        font-family: 'Quicksand', sans-serif;
+        color: #f0f8ff75;
+        font-weight: 300;
+    }
+    #number{
+        font-size: 170%;
+    }
+    .main{
+        margin: 24% 0;
+    }
+    .main-pic{
+        width: 300px;
+        margin:0 auto ; 
+        display: block;  
+        } 
+    .gif{
+     
+     margin:5% 1%;
+    }
+    
+    .lirul-pics{
+        display: flex;
+        justify-content:center;
+    }
+    @media only screen and (max-width: 600px) {
+  body {
+    
+  }
+}
+
+</style>
+<script>
+    
+
+//thanks to bfavaretto from stckovrflw
+var initialDate = new Date(2021, 2, 13); // month  zero-based
+var now = Date.now();
+var difference = initialDate - now;
+var millisecondsPerDay = 24 * 60 * 60 * 1000;
+var daysSince = Math.floor(difference / millisecondsPerDay);
+document.getElementById('number').innerHTML = daysSince+1;
+</script>
